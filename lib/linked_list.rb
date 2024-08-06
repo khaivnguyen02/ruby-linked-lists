@@ -54,7 +54,13 @@ class LinkedList
 
   def at(index)
     # TODO: Returns the node at the given index
-    
+    return nil if index < 0
+    current = @head
+    index.times do
+      return nil if current.nil?
+      current = current.next_node
+    end
+    current
   end
   
   def pop
